@@ -6,4 +6,5 @@ void main() async {
   final allWords = await englishWords.allWords;
 
   print('Total words in the library are: ${allWords.length}');
+  print(allWords);
 }

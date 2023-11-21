@@ -3,10 +3,14 @@ import 'dart:convert';
 import 'package:all_english_words/src/english_words_provider.dart';
 import 'dart:io';
 
+final _dicWord = 'lib/word_db/words_dictionary.json';
+final _englishWord = 'lib/word_db/english_words.json';
+final _alphanumericWord = 'lib/word_db/alphanumeric_words.json';
+
 class EnglishWordDB implements EnglishWordProvider {
   @override
   Future<List<String>> alphaNumericWords() async {
-    final fimeName = 'alphanumeric_words.json';
+    final fimeName = _alphanumericWord;
 
     final List<String> wordList = [];
 
@@ -30,7 +34,7 @@ class EnglishWordDB implements EnglishWordProvider {
 
   @override
   Future<List<String>> dictionaryWords() async {
-    final fimeName = 'words_dictionary.json';
+    final fimeName = _dicWord;
 
     final List<String> wordList = [];
 
@@ -54,7 +58,7 @@ class EnglishWordDB implements EnglishWordProvider {
 
   @override
   Future<List<String>> englishWord() async {
-    final fimeName = 'english_words.json';
+    final fimeName = _englishWord;
 
     final List<String> wordList = [];
 
