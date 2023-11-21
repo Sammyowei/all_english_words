@@ -15,22 +15,22 @@ void main() {
     test(
         'Test to get all words both english and alpha-numeric words from the library',
         () async {
-      final allWords = await mockEnglishWord.allWords;
+      final allWords = mockEnglishWord.allWords;
       expect(allWords, <String>[]);
     });
 
-    test('Test to get alpha-numeric words from library.', () async {
-      final alphaNumericWords = await mockEnglishWord.allAlphaNumericWords;
+    test('Test to get alpha-numeric words from library.', () {
+      final alphaNumericWords = mockEnglishWord.allAlphaNumericWords;
       expect(alphaNumericWords, <String>[]);
     });
 
-    test('test to get all english words from the word library', () async {
-      final englishWords = await mockEnglishWord.englishWords;
+    test('test to get all english words from the word library', () {
+      final englishWords = mockEnglishWord.englishWords;
       expect(englishWords, <String>[]);
     });
 
-    test('test to get all dictionary words from the word library', () async {
-      final dictionaryWords = await mockEnglishWord.allDictionaryWords;
+    test('test to get all dictionary words from the word library', () {
+      final dictionaryWords = mockEnglishWord.allDictionaryWords;
       expect(dictionaryWords, <String>[]);
     });
   });

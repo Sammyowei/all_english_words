@@ -1,10 +1,9 @@
 import 'package:all_english_words/all_english_words.dart';
 
-void main() async {
+void main() {
   var englishWords = AllEnglishWords();
 
-  final allWords = await englishWords.allWords;
+  final allWords = englishWords.allWords;
 
   print('Total words in the library are: ${allWords.length}');
-  print(allWords);
 }

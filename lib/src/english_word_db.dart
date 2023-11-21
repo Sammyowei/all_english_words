@@ -1,91 +1,58 @@
-import 'dart:convert';
-
 import 'package:all_english_words/src/english_words_provider.dart';
-import 'dart:io';
 
-final _dicWord = 'lib/word_db/words_dictionary.json';
-final _englishWord = 'lib/word_db/english_words.json';
-final _alphanumericWord = 'lib/word_db/alphanumeric_words.json';
+import 'package:all_english_words/word_db/alphanumeric_words.dart';
+import 'package:all_english_words/word_db/english_words.dart';
+import 'package:all_english_words/word_db/words_dictionary.dart';
 
 class EnglishWordDB implements EnglishWordProvider {
   @override
-  Future<List<String>> alphaNumericWords() async {
-    final fimeName = _alphanumericWord;
-
+  List<String> alphaNumericWords() {
     final List<String> wordList = [];
 
-    try {
-      // Read the JSON file
-      String content = await File(fimeName).readAsString();
-      final Map<String, dynamic> mapData = jsonDecode(content);
+    final Map<String, dynamic> mapData = alphaNumericWordDb;
 
-      // Iterate through the keys and add words of the specified length to the wordList
-      for (var word in mapData.keys) {
-        wordList.add(word);
-      }
-    } catch (e) {
-      print('Error reading file: $e');
-      // Return an empty list or handle the error as needed
-      return [];
+    // Iterate through the keys and add words of the specified length to the wordList
+    for (var word in mapData.keys) {
+      wordList.add(word);
     }
 
     return wordList;
   }
 
   @override
-  Future<List<String>> dictionaryWords() async {
-    final fimeName = _dicWord;
-
+  List<String> dictionaryWords() {
     final List<String> wordList = [];
 
-    try {
-      // Read the JSON file
-      String content = await File(fimeName).readAsString();
-      final Map<String, dynamic> mapData = jsonDecode(content);
+    final Map<String, dynamic> mapData = dictionaryWordDb;
 
-      // Iterate through the keys and add words of the specified length to the wordList
-      for (var word in mapData.keys) {
-        wordList.add(word);
-      }
-    } catch (e) {
-      print('Error reading file: $e');
-      // Return an empty list or handle the error as needed
-      return [];
+    // Iterate through the keys and add words of the specified length to the wordList
+    for (var word in mapData.keys) {
+      wordList.add(word);
     }
 
     return wordList;
   }
 
   @override
-  Future<List<String>> englishWord() async {
-    final fimeName = _englishWord;
-
+  List<String> englishWord() {
     final List<String> wordList = [];
 
-    try {
-      // Read the JSON file
-      String content = await File(fimeName).readAsString();
-      final Map<String, dynamic> mapData = jsonDecode(content);
+    final Map<String, dynamic> mapData = englishWordDb;
 
-      // Iterate through the keys and add words of the specified length to the wordList
-      for (var word in mapData.keys) {
-        wordList.add(word);
-      }
-    } catch (e) {
-      print('Error reading file: $e');
-      // Return an empty list or handle the error as needed
-      return [];
+    // Iterate through the keys and add words of the specified length to the wordList
+    for (var word in mapData.keys) {
+      wordList.add(word);
     }
 
     return wordList;
   }
 
   @override
-  Future<List<String>> allWords() async {
+  List<String> allWords() {
     List<String> wordList = [];
-    final alphaNumric = await alphaNumericWords();
-    final english = await englishWord();
-    final dictionary = await dictionaryWords();
+    final alphaNumric = alphaNumericWords();
+    final english = englishWord();
+    final dictionary = dictionaryWords();
     wordList
       ..addAll(alphaNumric)
       ..addAll(english)

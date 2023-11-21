@@ -1,6 +1,6 @@
 name: all_english_words
 description: A Package contain 500,000+ words, from Alpha-Numeric words to english words found in the dictionary..
-version: 1.0.2
+version: 1.0.3
 repository: https://github.com/Sammyowei/all_english_words
 
 environment:

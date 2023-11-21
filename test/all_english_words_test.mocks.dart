@@ -3,8 +3,6 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i3;
-
 import 'package:all_english_words/src/all_english_words_base.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
 
@@ -26,30 +24,30 @@ import 'package:mockito/mockito.dart' as _i1;
 /// See the documentation for Mockito's code generation for more information.
 class MockAllEnglishWords extends _i1.Mock implements _i2.AllEnglishWords {
   @override
-  _i3.Future<List<String>> get allWords => (super.noSuchMethod(
+  List<String> get allWords => (super.noSuchMethod(
         Invocation.getter(#allWords),
-        returnValue: _i3.Future<List<String>>.value(<String>[]),
-        returnValueForMissingStub: _i3.Future<List<String>>.value(<String>[]),
-      ) as _i3.Future<List<String>>);
+        returnValue: <String>[],
+        returnValueForMissingStub: <String>[],
+      ) as List<String>);
 
   @override
-  _i3.Future<List<String>> get allAlphaNumericWords => (super.noSuchMethod(
+  List<String> get allAlphaNumericWords => (super.noSuchMethod(
         Invocation.getter(#allAlphaNumericWords),
-        returnValue: _i3.Future<List<String>>.value(<String>[]),
-        returnValueForMissingStub: _i3.Future<List<String>>.value(<String>[]),
-      ) as _i3.Future<List<String>>);
+        returnValue: <String>[],
+        returnValueForMissingStub: <String>[],
+      ) as List<String>);
 
   @override
-  _i3.Future<List<String>> get allDictionaryWords => (super.noSuchMethod(
+  List<String> get allDictionaryWords => (super.noSuchMethod(
         Invocation.getter(#allDictionaryWords),
-        returnValue: _i3.Future<List<String>>.value(<String>[]),
-        returnValueForMissingStub: _i3.Future<List<String>>.value(<String>[]),
-      ) as _i3.Future<List<String>>);
+        returnValue: <String>[],
+        returnValueForMissingStub: <String>[],
+      ) as List<String>);
 
   @override
-  _i3.Future<List<String>> get englishWords => (super.noSuchMethod(
+  List<String> get englishWords => (super.noSuchMethod(
         Invocation.getter(#englishWords),
-        returnValue: _i3.Future<List<String>>.value(<String>[]),
-        returnValueForMissingStub: _i3.Future<List<String>>.value(<String>[]),
-      ) as _i3.Future<List<String>>);
+        returnValue: <String>[],
+        returnValueForMissingStub: <String>[],
+      ) as List<String>);
 }
