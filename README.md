@@ -11,29 +11,66 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+
+# All English Words
+
+The **All English Words** package is a Dart library designed to provide developers working on Dart and Flutter projects access to an extensive database containing over 500,000 English words. This package aims to offer a wide array of words suitable for various applications and creative endeavors.
+
+## Installation
+
+To incorporate the **All English Words** package into your Dart or Flutter project, add the following line to your `pubspec.yaml` file:
+
+  ```yaml
+   dependencies:
+     all_english_words: ^x.x.x # Replace with the latest version
+  ```
+
+  ```bash
+     dart pub get
+  ```
+This command will fetch and install the package along with its dependencies into your project.
+
+
+## Usage
+Import the package into your Dart or Flutter file:
+
+```dart
+import 'package:all_english_words/all_english_words.dart';
+
+void main() async {
+  var englishWords = AllEnglishWords();
+
+  final allWords = await englishWords.allWords;
+
+  print('Total words in the library are: ${allWords}');
+}
+```
+
+The example demonstrates how to access the library and retrieve all available words. Upon execution, it will print the total count of words in the library.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+### Word Retrieval
+The package provides a simple method allWords to asynchronously fetch the entire word collection.
 
 ```dart
-const like = 'sample';
+var englishWords = AllEnglishWords();
+final allWords = await englishWords.allWords;
+
 ```
 
-## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+
+### Future Enhancements
+Future updates may introduce additional functionalities, such as word filtering by length, categorization, or language variations.
+
+## Contribution
+Contributions are welcome! If you have ideas for improvements, bug fixes, or new features, feel free to contribute. Fork the repository, make changes, and submit a pull request.
+
+## Issues
+If you encounter any issues or have suggestions, please open an issue in the repository.
+
+
+## Acknowledgments
+Special thanks to contributors and users who have provided valuable feedback and support to improve this package.
+
